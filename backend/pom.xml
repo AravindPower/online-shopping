@@ -16,9 +16,87 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <spring.version>5.2.7.RELEASE</spring.version>
+    <jackson.version>2.11.2</jackson.version>
   </properties>
 
   <dependencies>
+  
+		    <dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+					<version>${spring.version}</version>
+				<exclusions>
+					 <exclusion>
+					   <groupId>commons-logging</groupId>
+					   <artifactId>commons-logging</artifactId>
+					 </exclusion>
+				</exclusions>
+		   </dependency>
+		  
+  
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- Hibernate and Sql configuration -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.15</version>
+		</dependency>
+  		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-orm</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<!-- Hibernate configuration -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId>
+		    <version>5.4.20.Final</version>
+		</dependency>
+		
+		<!--  Database Connection Pooling -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-dbcp2</artifactId>
+		    <version>2.1.1</version>
+		       <exclusions>
+					 <exclusion>
+					   <groupId>commons-logging</groupId>
+					   <artifactId>commons-logging</artifactId>
+					 </exclusion>
+				</exclusions>
+		</dependency>
+  <!-- json format dependency -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>${jackson.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>${jackson.version}</version>
+		</dependency>
+		<!-- slf4j logging dependency -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+  
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
