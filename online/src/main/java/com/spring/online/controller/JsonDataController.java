@@ -19,7 +19,7 @@ public class JsonDataController {
 	private ProductDAO productDAO;
 	
 	
-	@RequestMapping(value="/all/products")
+	@RequestMapping(value="/admin/all/products")
 	@ResponseBody
 	public List<Product> getAllProducts(){
 		

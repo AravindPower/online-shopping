@@ -40,7 +40,6 @@ public class HibernateConfig
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean session = new LocalSessionFactoryBean();
 		session.setDataSource(dataSource());
-		session.setAnnotatedClasses(Category.class);
 		session.setPackagesToScan("com.spring.backend.dto");
 		session.setHibernateProperties(getHibernateProperties());
 		return session;
@@ -52,10 +51,10 @@ public class HibernateConfig
 
 		Properties property = new Properties();
 		log.info("hibernate loading");
-		property.put("hibernate.htm2ddl", "update");
-		property.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+		property.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 		property.put("hibernate.show_sql", "true");
 		property.put("hibernate.format_sql", "true");
+		property.put("hibernate.hbm2ddl.auto", "update");
 		log.info("hibernate loaded");
 		return property;
 
