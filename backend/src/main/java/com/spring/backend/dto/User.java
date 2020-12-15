@@ -47,7 +47,7 @@ public class User implements Serializable {
 	@Transient
 	private String confirmPassword;
 	
-    @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true,fetch = FetchType.LAZY)
 	private Cart cart;
 	
 	
@@ -111,9 +111,7 @@ public class User implements Serializable {
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+
 	
 	// for logging and testing purpose
 	@Override

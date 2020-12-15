@@ -9,8 +9,8 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>backend</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <!-- FIXME change it to the project's web site -->
+  <url>http://www.online.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -49,6 +49,7 @@
 					<version>${spring.version}</version>
 				</dependency>
 				<!-- Hibernate and Sql configuration -->
+			
 				<dependency>
 					<groupId>org.springframework</groupId>
 					<artifactId>spring-jdbc</artifactId>
@@ -67,6 +68,7 @@
 				    <version>${spring.version}</version>
 				</dependency>
 				<!-- Hibernate configuration -->
+				
 				<dependency>
 				    <groupId>org.hibernate</groupId>
 				    <artifactId>hibernate-core</artifactId>

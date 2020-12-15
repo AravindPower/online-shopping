@@ -61,6 +61,15 @@
 			
 				<div class="col-xs-12"> 
 				
+				<div class="container-fluid">
+				
+				 <div class="table-responsive">
+				 
+				 
+				 </div>
+				
+				</div>
+				
 					<table id="productListTable" class="table table-striped table-borderd">
 					
 					  <thead>

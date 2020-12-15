@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import com.spring.backend.dao.UserDAO;
 import com.spring.backend.dto.Address;
-import com.spring.backend.dto.Cart;
 import com.spring.backend.dto.User;
 
 @Repository("userDAO")
@@ -37,7 +36,7 @@ public class UserDAOImpl implements UserDAO {
 	public boolean addAddress(Address address) {
 		try {
 
-			sessionFactory.getCurrentSession().persist(address);
+			sessionFactory.getCurrentSession().save(address);
 			return true;
 
 		} catch (Exception ex) {
@@ -47,17 +46,7 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 
-	@Override
-	public boolean updateCart(Cart cart) {
-		try {
-			sessionFactory.getCurrentSession().saveOrUpdate(cart);
-			return true;
-		} catch (Exception ex) {
-			ex.printStackTrace();
-			return false;
-		}
-
-	}
+	
 
 	@Override
 	public User getByEmail(String email) {

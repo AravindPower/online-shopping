@@ -24,7 +24,7 @@ public class HibernateConfig
 	private final Logger log = Logger.getLogger(HibernateConfig.class);
 	
 	
-	@Bean
+	@Bean(name = "dataSource")
 	public DriverManagerDataSource dataSource() {
 		DriverManagerDataSource ds = new DriverManagerDataSource();
 		log.info("loading data base details");

@@ -26,6 +26,18 @@ public class JsonDataController {
 		return productDAO.listActiveProducts();
 		
 	}
+	
+	
+	
+	@RequestMapping(value="/all/products")
+	@ResponseBody
+	public List<Product> getAllProductsForUser(){
+		
+		return productDAO.listActiveProducts();
+		
+	}
+
+	
 
 	
 	@RequestMapping(value="/category/{id}/products")

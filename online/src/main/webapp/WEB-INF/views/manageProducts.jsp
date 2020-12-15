@@ -34,7 +34,7 @@
 							</div>
 						</div>
 						
-						<div class="form-group">
+						<div class="form-group" >
 							<label class="control-label col-md-4">Brand</label>
 							<div class="col-md-8">
 								<sf:input type="text" path="brand" class="form-control"
@@ -142,8 +142,11 @@
 </div>
 
  <div class="col-xs-12">
-
-  <div style="overflow: auto;">
+ <div class="container-fluid">
+  <div class="table-responsive">
+  
+  
+ 
   <!-- products table for admin -->
   <table id="adminProdutsTable" class="table table-striped table-bordered">
 							
@@ -179,7 +182,8 @@
   
   </div>
  
- 
+ </div>
+ </div>
  
  </div>
 
@@ -245,4 +249,3 @@
   </div>
   
 
-</div>
